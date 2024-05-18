@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Data Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="affected-link">Affected</a></li>
+            <li><a href="#" id="vaccinated-link">Vaccinated</a></li>
+            <li><a href="#" id="neighbors-link">Neighboring Countries</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <!-- Affected Page -->
+        <div id="affected" class="page">
+            <h2>COVID-19 Affected Data</h2>
+            <select id="country-select-affected"></select>
+            <canvas id="affected-chart"></canvas>
+        </div>
+
+        <!-- Vaccinated Page -->
+        <div id="vaccinated" class="page">
+            <h2>COVID-19 Vaccination Data</h2>
+            <select id="country-select-vaccinated"></select>
+            <canvas id="vaccinated-chart"></canvas>
+        </div>
+
+        <!-- Neighboring Countries Page -->
+        <div id="neighbors" class="page">
+            <h2>COVID-19 Data for Neighboring Countries</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Cases</th>
+                        <th>Deaths</th>
+                        <th>Recoveries</th>
+                        <th>Vaccinations</th>
+                    </tr>
+                </thead>
+                <tbody id="neighbors-table-body">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/chart-utils.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
